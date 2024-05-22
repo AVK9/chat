@@ -1,29 +1,30 @@
-import React from 'react';
-import { Provider } from 'react-redux';
-import { PersistGate } from 'redux-persist/integration/react';
-// import { Global } from '@emotion/react';
-import { BrowserRouter } from 'react-router-dom';
+import React, { createContext } from 'react';
 import ReactDOM from 'react-dom/client';
-import { persistor, store } from './store/store.js';
-import { ThemeProvider } from 'styled-components';
-import 'normalize.css';
+import { Global } from '@emotion/react';
+// import { GlobalStyles } from '../GlobalStyles';
+import App from './App';
+import { auth, firestore } from './services/firebase';
+import firebase from 'firebase/compat/app';
+import { BrowserRouter } from 'react-router-dom';
 
-import App from './App.jsx';
-// import GlobalStyles from './assets/styles/GlobalStyles.jsx';
-import { Global, theme } from './assets/styles';
+export const Context = createContext(null);
 
-ReactDOM.createRoot(document.getElementById('root')).render(
-  // <React.StrictMode>
-  <Provider store={store}>
-    <PersistGate loading={null} persistor={persistor}>
-      <BrowserRouter basename="/chat">
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+  <React.StrictMode>
+    <BrowserRouter
+    // basename="/chat_fb"
+    >
+      <Context.Provider
+        value={{
+          firebase,
+          auth,
+          firestore,
+        }}
+      >
         {/* <Global styles={GlobalStyles} /> */}
-        <ThemeProvider theme={theme}>
-          <Global />
-          <App />
-        </ThemeProvider>
-      </BrowserRouter>
-    </PersistGate>
-  </Provider>
-  // </React.StrictMode>
+        <App />
+      </Context.Provider>
+    </BrowserRouter>
+  </React.StrictMode>
 );
