@@ -1,4 +1,4 @@
-import{n as v,h as zt,u as s,e as ce,j as r,r as x,R as ee,f as je,a as le,i as Z,B as se,k as At,d as ct,l as Lt,m as qt,o as _t,t as _e,p as Ht}from"./index-43f96ee1.js";const Wa=v.div`
+import{n as v,h as zt,u as s,e as ce,j as r,r as x,R as ee,f as je,a as le,i as Z,B as se,k as At,d as ct,l as Lt,m as qt,o as _t,t as _e,p as Ht}from"./index-1c5dc526.js";const Wa=v.div`
   margin-top: 32px;
   display: flex;
   flex-direction: column;
@@ -264,7 +264,7 @@ transform: rotateZ(360deg)
   text-align: center;
   color: var(--main);
   text-transform: capitalize;
-`,S="/CV/assets/sprite-e5ae8524.svg",fn=s.svg`
+`,S="/chat/assets/sprite-e5ae8524.svg",fn=s.svg`
   width: ${e=>e.size||"20px"};
   height: ${e=>e.size||"20px"};
   stroke-width: 1.5px;
