@@ -10,4 +10,4 @@ export const messagingSenderId = import.meta.env.VITE_MESSAGING_SENDER_ID;
 export const appId = import.meta.env.VITE_APP_ID;
 export const measurementId = import.meta.env.VITE_MEASUREMENT_ID;
 
-console.log('apiKey', apiKey);
+console.log('apiKey', import.meta.env);
