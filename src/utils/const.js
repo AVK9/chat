@@ -1,3 +1,5 @@
+// import 'dotenv/config';
+
 export const LOGIN_ROUTE = 'chat/login';
 export const CHAT_ROUTE = 'chat/chat';
 export const apiKey = import.meta.env.VITE_API_KEY;
@@ -7,3 +9,5 @@ export const storageBucket = import.meta.env.VITE_STORAGE_BUCKET;
 export const messagingSenderId = import.meta.env.VITE_MESSAGING_SENDER_ID;
 export const appId = import.meta.env.VITE_APP_ID;
 export const measurementId = import.meta.env.VITE_MEASUREMENT_ID;
+
+console.log('apiKey', apiKey);
