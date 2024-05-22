@@ -1,7 +1,7 @@
 // import 'dotenv/config';
 
-export const LOGIN_ROUTE = 'chat/login';
-export const CHAT_ROUTE = 'chat/chat';
+export const LOGIN_ROUTE = '/login';
+export const CHAT_ROUTE = '/chat';
 export const apiKey = import.meta.env.VITE_API_KEY;
 export const authDomain = import.meta.env.VITE_AUTH_DOMAIN;
 export const projectId = import.meta.env.VITE_PROJECT_ID;
